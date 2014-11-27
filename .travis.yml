@@ -11,8 +11,6 @@ env:
 
 before_install:
 - sudo pip install PyOpenSSL
-- openssl aes-256-cbc -K $encrypted_e7fb07691267_key -iv $encrypted_e7fb07691267_iv
-  -in $PROJECT_ID.p12.enc -out $PROJECT_ID.p12 -d
 - openssl aes-256-cbc -K $encrypted_0ab95ae1de54_key -iv $encrypted_0ab95ae1de54_iv 
   -in $PROJECT_ID.p12.enc -out $PROJECT_ID.p12 -d
 - curl https://sdk.cloud.google.com | bash
